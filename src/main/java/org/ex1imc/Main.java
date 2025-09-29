@@ -22,7 +22,7 @@ public class Main {
             if (imc < 32.3) {
                 return "Acima do peso ideal.";
             }
-            return "Obeso."; // depois pesquisa como escrever isso mais bonitinho
+            return "Obeso.";
         }
 
         if (sexo.equals("masculino")) {
@@ -38,7 +38,7 @@ public class Main {
             if (imc < 31.1) {
                 return "Acima do peso ideal.";
             }
-            return "Obeso."; // depois pesquisa como escrever isso mais bonitinho
+            return "Obeso.";
         }
 
         return "Sexo deve ser 'feminino' ou 'masculino'";
