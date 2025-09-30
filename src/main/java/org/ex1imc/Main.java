@@ -2,45 +2,16 @@ package org.ex1imc;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(getIMC(60.0,1.60,"masculino"));
-        System.out.println(getIMC(60.0,1.60,"feminino"));
-    }
+        Pessoa p1 = new Pessoa();
+        p1.setAltura(1.0);
+        p1.setPeso(150.0);
+        p1.setSexo("masculino");
+        System.out.println(p1.getIMC());
 
-    public static String getIMC(Double peso, Double altura, String sexo){
-        Double imc = peso/ Math.pow(altura, 2);
-
-        if (sexo.equals("feminino")) {
-            if (imc < 19.1) {
-                return "Abaixo do peso.";
-            }
-            if (imc < 25.8) {
-                return "Peso ideal.";
-            }
-            if (imc < 27.3) {
-                return "Marginalmente acima do peso.";
-            }
-            if (imc < 32.3) {
-                return "Acima do peso ideal.";
-            }
-            return "Obeso.";
-        }
-
-        if (sexo.equals("masculino")) {
-            if (imc < 20.7) {
-                return "Abaixo do peso.";
-            }
-            if (imc < 26.4) {
-                return "Peso ideal.";
-            }
-            if (imc < 27.8) {
-                return "Marginalmente acima do peso.";
-            }
-            if (imc < 31.1) {
-                return "Acima do peso ideal.";
-            }
-            return "Obeso.";
-        }
-
-        return "Sexo deve ser 'feminino' ou 'masculino'";
+        Pessoa p2 = new Pessoa();
+        p2.setAltura(1.0);
+        p2.setPeso(150.0);
+        p2.setSexo("feminino");
+        System.out.println(p2.getIMC());
     }
 }
