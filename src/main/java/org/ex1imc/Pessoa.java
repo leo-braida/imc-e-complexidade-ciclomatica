@@ -13,7 +13,7 @@ public class Pessoa {
 
     public void setAltura(Double altura) {
         if (altura <= 0) {
-            throw new IllegalArgumentException("O altura deve ser maior que zero");
+            throw new IllegalArgumentException("A altura deve ser maior que zero");
         }
         this.altura = altura;
     }
@@ -45,6 +45,9 @@ public class Pessoa {
     }
 
     public void setNome(String nome) {
+        if (nome == null || nome.trim().equals("")) {
+            throw new IllegalArgumentException("O nome não pode ser nulo.");
+        }
         this.nome = nome;
     }
 
